@@ -4,3 +4,7 @@
 ### SonarQube badges:
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Ja0nix_python-project-49&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Ja0nix_python-project-49)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Ja0nix_python-project-49&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Ja0nix_python-project-49)
+
+
+### Brain-even gameplay
+[![asciicast](https://asciinema.org/a/8Fwh73KX9BYb8OBHWZ0RdLYp1.svg)](https://asciinema.org/a/8Fwh73KX9BYb8OBHWZ0RdLYp1)
