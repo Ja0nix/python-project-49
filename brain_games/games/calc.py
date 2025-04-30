@@ -1,5 +1,4 @@
-from random import randint
-from random import choice
+from random import choice, randint
 
 
 def calc_game_data():
@@ -14,19 +13,19 @@ def calc_game_data():
 
     while i < questions_in_game:
         random_operation = choice(operations)
-        random_number1 = randint(1,10)
-        random_number2 = randint(1,10)
+        random_num1 = randint(1, 10)
+        random_num2 = randint(1, 10)
 
-        questions.append(f'{random_number1} {random_operation} {random_number2}')
+        questions.append(f'{random_num1} {random_operation} {random_num2}')
 
         if random_operation == '+':
-            answers_for_questions[questions[i]] = random_number1 + random_number2
+            answers_for_questions[questions[i]] = random_num1 + random_num2
 
         if random_operation == '-':
-            answers_for_questions[questions[i]] = random_number1 - random_number2
+            answers_for_questions[questions[i]] = random_num1 - random_num2
 
         if random_operation == '*':
-            answers_for_questions[questions[i]] = random_number1 * random_number2
+            answers_for_questions[questions[i]] = random_num1 * random_num2
 
         i = i + 1
 

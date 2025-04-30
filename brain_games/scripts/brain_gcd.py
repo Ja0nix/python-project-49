@@ -1,5 +1,6 @@
-from brain_games.games.gcd import calc_game_data
 from brain_games.game_engine import engine
+from brain_games.games.gcd import calc_game_data
+
 
 def main():
     questions, answers_for_questions, game_task = calc_game_data()

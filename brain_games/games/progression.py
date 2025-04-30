@@ -1,5 +1,4 @@
 from random import randint
-from math import gcd
 
 
 def calc_game_data():
@@ -11,9 +10,9 @@ def calc_game_data():
     i = 0
 
     while i < questions_in_game:
-        random_first_number = randint(1,20)
-        random_difference = randint(1,10)
-        random_length = randint(5,10)
+        random_first_number = randint(1, 20)
+        random_difference = randint(1, 10)
+        random_length = randint(5, 10)
         random_position_to_guess = randint(1, random_length - 1)
 
         k = 1
@@ -28,7 +27,6 @@ def calc_game_data():
                 next_number = random_first_number + k * random_difference
                 progression = f'{progression} {next_number}'
             k = k + 1
-
 
         questions.append(f'{progression}')
 
