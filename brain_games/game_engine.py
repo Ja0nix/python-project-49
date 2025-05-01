@@ -11,10 +11,8 @@ def engine(questions, answers, game_task):
     print(game_task)
 
     correct_answer_count = 0
-    wrong_answer_count = 0
 
-    while (correct_answer_count < 3 and wrong_answer_count == 0):
-        
+    for question in questions:
         print(f'Question: {questions[correct_answer_count]}?')
         user_answer = prompt.string('Your answer: ')
 
@@ -23,9 +21,9 @@ def engine(questions, answers, game_task):
             correct_answer_count = correct_answer_count + 1
         else:
             print(f'{user_answer} is wrong answer ;(. Correct answer was '
-                  f'{answers[questions[correct_answer_count]]}. '
-                  f'Let\'s try again, {name}!')
-            wrong_answer_count = 1
-
+                f'{answers[questions[correct_answer_count]]}. '
+                f'Let\'s try again, {name}!')
+            return
+        
     if correct_answer_count == 3:
         print(f'Congratulations, {name}!')
