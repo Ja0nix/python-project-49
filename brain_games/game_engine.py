@@ -1,6 +1,11 @@
 import prompt
 
 
+def get_rounds_in_game():
+    rounds = 3
+    return rounds
+
+
 def engine(questions, answers, game_task):
 
     print("Welcome to the Brain Games!")
@@ -10,20 +15,20 @@ def engine(questions, answers, game_task):
     
     print(game_task)
 
-    correct_answer_count = 0
+    rounds_left = get_rounds_in_game()
 
     for question in questions:
-        print(f'Question: {questions[correct_answer_count]}?')
+        print(f'Question: {questions[rounds_left - 1]}?')
         user_answer = prompt.string('Your answer: ')
 
-        if user_answer.lower() == str(answers[questions[correct_answer_count]]):
+        if user_answer.lower() == str(answers[questions[rounds_left - 1]]):
             print('Correct!')
-            correct_answer_count = correct_answer_count + 1
+            rounds_left = rounds_left - 1
         else:
             print(f'{user_answer} is wrong answer ;(. Correct answer was '
-                f'{answers[questions[correct_answer_count]]}. '
+                f'{answers[questions[rounds_left - 1]]}. '
                 f'Let\'s try again, {name}!')
             return
         
-    if correct_answer_count == 3:
+    if rounds_left == 0:
         print(f'Congratulations, {name}!')

@@ -1,5 +1,7 @@
 from random import randint
 
+from brain_games.game_engine import get_rounds_in_game
+
 
 def calc_game_data():
     answers_for_questions = {}
@@ -10,7 +12,7 @@ def calc_game_data():
         2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 
         43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
         ]
-    questions_in_game = 3
+    questions_in_game = get_rounds_in_game()
     i = 0
 
     while i < questions_in_game:
