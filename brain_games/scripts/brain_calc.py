@@ -1,11 +1,11 @@
 from brain_games.game_engine import engine
-from brain_games.games.calc import calc_game_data
+from brain_games.games.calc import calc_game_data, game_task
 
 
 def main():
-    questions, answers_for_questions, game_task = calc_game_data()
-    engine(questions, answers_for_questions, game_task)
+    engine(calc_game_data, game_task)
 
 
 if __name__ == "__main__":
     main()
+    
